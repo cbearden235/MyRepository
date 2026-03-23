@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
-    <title>Modern HTTP</title>
+    <title>Early HTTP</title>
         <style>
             .title {
                 background-color: #284C7A;
                 color: white;
-                margin: 20px;
+                margin: 0px;
                 padding: 24px 100px;
                 text-align: center;
             }
@@ -14,27 +14,29 @@
                 padding: 24px 100px;
             }
 
-            ul {
-                list-style-type: none;
-                margin: 0;
-                padding: 0;
-                overflow: hidden;
+            nav {
                 background-color: #333;
             }
 
-            li {
-                float: left;
+            nav ul {
+                list-style-type: none;
+                display: flex;
+                justify-content: center;
             }
 
-            li a {
+            nav ul li {
+                margin: 0
+            }
+
+            nav ul li a {
                 display: block;
                 color: white;
-                text-align: center;
                 padding: 14px 16px;
                 text-decoration: none;
+                transition: background-color 0.3s ease;
             }
 
-            li a:hover {
+            nav ul li a:hover {
                 background-color: #111;
             }
 
@@ -45,17 +47,41 @@
     </head>
     <body>
         <!-- Navbar -->
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="topic1.html">Topic 1</a></li>
-            <li><a href="topic2.html">Topic 2</a></li>
-            <li><a href="key_concepts.html">Key Concepts</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="references.html">References</a></li>
-        </ul>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="topic1.html">Early HTTP</a></li>
+                <li><a href="topic2.html">Modern HTTP</a></li>
+                <li><a href="key_concepts.html">Key Concepts</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="references.html">References</a></li>
+            </ul>
+        </nav>
         
-        <div class = "title">
-            <h1>Modern HTTP</h1>
+        <div class="container">
+            <!-- Title of page -->
+            <div class="title">
+                <h1>Modern HTTP</h1>
+            </div>
+            
+            <!-- Contents of page -->
+            <h2>HTTP/1.1</h2>
+            <p>This version contributed several improvements including reusing connections. Before, every time a new request was sent 
+                to a server, a new connection would be created. This took time, but reusing the same connecting between 
+                a client and server was implemented. Another improvement was pipelining. This made it so that subsequent 
+                requests could be sent out over the network before previous requests had finished transmitting. Servers also 
+                started sending responses in chunks. These improvements all increased the speed of the transmissions. </p>
+            <h2>HTTP/2</h2>
+            <p>Communication continued to speed up by allowing requests and responses to be fully multiplex. This means that different 
+                responses and requests could use the same connections which saved time because new connections did not have to be created. 
+                This version also compressed HTTP header fields to reduce the protocol overhead.</p>
+
+            <!-- HTTP/3 (need more research)-->
+             
+            <h2>HTTPS</h2>
+            <p>HTTPS, which stands for Hypertext Transfer Protocol Secure, uses an encryption protocol called Transport Layer Security (TLC) 
+                to keep the information that is being sent over the network secure. A lot of the information that is sent is sensitive, 
+                personal information, and it is important to keep it private. HTTPS is used by most websites today.</p>
         </div>
     </body>
 </html>
