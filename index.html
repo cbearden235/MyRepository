@@ -1,20 +1,30 @@
 <!DOCTYPE html>
 <html>
-    <title>Early HTTP</title>
+    <title>Home</title>
         <style>
-            .title {
+            /*Page title*/
+            #title {
                 background-color: #284C7A;
                 color: white;
-                margin: 0px;
+                margin: 0px 0px 50px 0px;
                 padding: 24px 100px;
                 text-align: center;
+                border-style: outset;
+                border-width: 10px;
+                border-color: #284C7A;
             }
 
+            /*Creates whitspace*/
             .container {
                 margin: 0px;
                 padding: 24px 100px;
             }
 
+            footer {
+                margin: 60px 0px 0px 0px;
+            }
+
+            /*Navbar*/
             nav {
                 background-color: #333;
             }
@@ -38,7 +48,12 @@
             }
 
             nav ul li a:hover {
+                color: white;
                 background-color: #111;
+            }
+
+            a:hover {
+                color: black;
             }
 
             h1, h2, h3, h4, h5, h6, p, a {
@@ -69,7 +84,7 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="topic1.html">Early HTTP</a></li>
                 <li><a href="topic2.html">Modern HTTP</a></li>
-                <li><a href="key_concepts.html">Key Concepts</a></li>
+                <li><a href="topic3.html">Secure HTTP</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="references.html">References</a></li>
             </ul>
@@ -77,7 +92,7 @@
 
         <div class="container">
             <!-- Title of page -->
-            <div class = "title">
+            <div id="title">
                 <h1>All About HTTP</h1>
             </div>
 
@@ -98,11 +113,13 @@
                 </tr>
                 <tr>
                     <td>HTML</td>
-                    <td>Hypertext Markup Language which is the standard system for creating files which are used to for displaying web pages</td>
+                    <td>Hypertext Markup Language which is the standard system for creating files which are used to for displaying web 
+                        pages</td>
                 </tr>
                 <tr>
                     <td>Client</td>
-                    <td>A device or computer program (often a web browser) which sends requests and recieves resources and services from a server</td>
+                    <td>A device or computer program (often a web browser) which sends requests and recieves resources and services 
+                        from a server</td>
                 </tr>
                 <tr>
                     <td>Server</td>
@@ -114,7 +131,8 @@
                 </tr>
                 <tr>
                     <td>Multiplexing</td>
-                    <td>A sytem of combining messages sent over a network which allows multiple message to be sent simultaneously which allows for sharing of resources</td>
+                    <td>A sytem of combining messages sent over a network which allows multiple message to be sent simultaneously 
+                        which allows for sharing of resources</td>
                 </tr>
                 <tr>
                     <td>Overhead</td>
@@ -130,6 +148,11 @@
                 <li><a href="about.html">About</a></li>
                 <li><a href="references.html">References</a></li>
             </ul>
+            
+            <!-- Footer indicating class project -->
+            <footer>
+                This is a project for the class IT 3202. Here is the class website <a href="https://ksuweb.github.io/IT3203/">https://ksuweb.github.io/IT3203/</a>
+            </footer>
         </div>
     </body>
 </html>
