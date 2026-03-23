@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
-    <title>About</title>
+    <title>Early HTTP</title>
         <style>
             .title {
                 background-color: #284C7A;
                 color: white;
-                margin: 20px;
+                margin: 0px;
                 padding: 24px 100px;
                 text-align: center;
             }
@@ -14,27 +14,29 @@
                 padding: 24px 100px;
             }
 
-            ul {
-                list-style-type: none;
-                margin: 0;
-                padding: 0;
-                overflow: hidden;
+            nav {
                 background-color: #333;
             }
 
-            li {
-                float: left;
+            nav ul {
+                list-style-type: none;
+                display: flex;
+                justify-content: center;
             }
 
-            li a {
+            nav ul li {
+                margin: 0
+            }
+
+            nav ul li a {
                 display: block;
                 color: white;
-                text-align: center;
                 padding: 14px 16px;
                 text-decoration: none;
+                transition: background-color 0.3s ease;
             }
 
-            li a:hover {
+            nav ul li a:hover {
                 background-color: #111;
             }
 
@@ -45,17 +47,29 @@
     </head>
     <body>
         <!-- Navbar -->
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="topic1.html">Topic 1</a></li>
-            <li><a href="topic2.html">Topic 2</a></li>
-            <li><a href="key_concepts.html">Key Concepts</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="references.html">References</a></li>
-        </ul>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="topic1.html">Early HTTP</a></li>
+                <li><a href="topic2.html">Modern HTTP</a></li>
+                <li><a href="key_concepts.html">Key Concepts</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="references.html">References</a></li>
+            </ul>
+        </nav>
         
-        <div class = "title">
-            <h1>About</h1>
+        <div class="container">
+            <!-- Title of page -->
+            <div class="title">
+                <h1>About</h1>
+            </div>
+
+            <!-- Contents of page -->
+            <p>Hello, my name is Carolyn Bearden. I am a student at Kennesaw State University in my second year studyiing Information 
+                Technology. I made this website as a prject for my IT 3203 Intro to Web Development class. For this project I research 
+                how HTTP works and the history of it. Then I used the information I found and my knowledge of HTML and CSS that I 
+                learned in this class to create this website.
+            </p>
         </div>
     </body>
 </html>

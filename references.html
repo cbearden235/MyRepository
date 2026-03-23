@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
-    <title>References</title>
+    <title>Early HTTP</title>
         <style>
             .title {
                 background-color: #284C7A;
                 color: white;
-                margin: 20px;
+                margin: 0px;
                 padding: 24px 100px;
                 text-align: center;
             }
@@ -14,27 +14,29 @@
                 padding: 24px 100px;
             }
 
-            ul {
-                list-style-type: none;
-                margin: 0;
-                padding: 0;
-                overflow: hidden;
+            nav {
                 background-color: #333;
             }
 
-            li {
-                float: left;
+            nav ul {
+                list-style-type: none;
+                display: flex;
+                justify-content: center;
             }
 
-            li a {
+            nav ul li {
+                margin: 0
+            }
+
+            nav ul li a {
                 display: block;
                 color: white;
-                text-align: center;
                 padding: 14px 16px;
                 text-decoration: none;
+                transition: background-color 0.3s ease;
             }
 
-            li a:hover {
+            nav ul li a:hover {
                 background-color: #111;
             }
 
@@ -45,17 +47,46 @@
     </head>
     <body>
         <!-- Navbar -->
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="topic1.html">Topic 1</a></li>
-            <li><a href="topic2.html">Topic 2</a></li>
-            <li><a href="key_concepts.html">Key Concepts</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="references.html">References</a></li>
-        </ul>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="topic1.html">Early HTTP</a></li>
+                <li><a href="topic2.html">Modern HTTP</a></li>
+                <li><a href="key_concepts.html">Key Concepts</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="references.html">References</a></li>
+            </ul>
+        </nav>
         
-        <div class = "title">
-            <h1>References</h1>
+        <div class="container">
+            <!-- Title of page -->
+            <div class="title">
+                <h1>References</h1>
+            </div>
+
+            <!-- Citations for references -->
+            <ul>
+                <li>
+                    Britannica. <em>HTTP</em>, 2026.
+                    <a href="https://www.britannica.com/technology/HTTP">https://www.britannica.com/technology/HTTP</a>
+                </li>
+                <li>
+                    Cloudflare. <em>What is HTTPS?</em>.
+                    <a href="https://www.cloudflare.com/learning/ssl/what-is-https/">https://www.cloudflare.com/learning/ssl/what-is-https/</a>
+                </li>
+                <li>
+                    GeeksforGeeks. <em>How HTTP Evolved Throughout The Years?</em>, 2025.
+                    <a href="https://www.geeksforgeeks.org/blogs/how-http-evolved-throughout-the-years/">https://www.geeksforgeeks.org/blogs/how-http-evolved-throughout-the-years/</a>
+                </li>
+                <li>
+                    MDN. <em>Evolution of HTTP</em>, 2025.
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Evolution_of_HTTP">https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Evolution_of_HTTP</a>
+                </li>
+                <li>
+                    MDN. <em>Overview of HTTP</em>, 2026.
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Overview">https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Overview</a>
+                </li>
+            </ul>
         </div>
     </body>
 </html>

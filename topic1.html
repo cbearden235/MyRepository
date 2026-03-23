@@ -5,7 +5,7 @@
             .title {
                 background-color: #284C7A;
                 color: white;
-                margin: 20px;
+                margin: 0px;
                 padding: 24px 100px;
                 text-align: center;
             }
@@ -14,27 +14,29 @@
                 padding: 24px 100px;
             }
 
-            ul {
-                list-style-type: none;
-                margin: 0;
-                padding: 0;
-                overflow: hidden;
+            nav {
                 background-color: #333;
             }
 
-            li {
-                float: left;
+            nav ul {
+                list-style-type: none;
+                display: flex;
+                justify-content: center;
             }
 
-            li a {
+            nav ul li {
+                margin: 0
+            }
+
+            nav ul li a {
                 display: block;
                 color: white;
-                text-align: center;
                 padding: 14px 16px;
                 text-decoration: none;
+                transition: background-color 0.3s ease;
             }
 
-            li a:hover {
+            nav ul li a:hover {
                 background-color: #111;
             }
 
@@ -45,17 +47,34 @@
     </head>
     <body>
         <!-- Navbar -->
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="topic1.html">Topic 1</a></li>
-            <li><a href="topic2.html">Topic 2</a></li>
-            <li><a href="key_concepts.html">Key Concepts</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="references.html">References</a></li>
-        </ul>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="topic1.html">Early HTTP</a></li>
+                <li><a href="topic2.html">Modern HTTP</a></li>
+                <li><a href="key_concepts.html">Key Concepts</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="references.html">References</a></li>
+            </ul>
+        </nav>
 
-        <div class = "title">
-            <h1>Early HTTP</h1>
+        <div class="container">
+            <!-- Title of page -->
+            <div class="title">
+                <h1>Early HTTP</h1>
+            </div>
+
+            <!-- Contents of page -->
+            <h2>HTTP/0.9</h2>
+            <p>This was the initial version of HTTP. The requests and the responses that were sent were very simple. 
+                The requests were just one line and the responses where just the files themselves. They did not have headers, 
+                which are now used to convey additional information. HTTP/0.9 also lacked error and status codes. Instead, a special 
+                HTML file was sent to tell the user what had happened. </p>
+                
+            <h2>HTTP/1.0</h2>
+            <p>This stage of the evolution was led by the browsers and servers. The status code was added and was at the beginning of 
+                responses servers sent. This made it so that the client was able to understand what happened if an error occured 
+                instead of the user having to figure it out. The client was then able to respond to the error.</p>
         </div>
     </body>
 </html>

@@ -1,70 +1,135 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>About HTTP</title>
+    <title>Early HTTP</title>
         <style>
             .title {
                 background-color: #284C7A;
                 color: white;
-                margin: 20px;
+                margin: 0px;
                 padding: 24px 100px;
                 text-align: center;
             }
+
             .container {
                 margin: 0px;
                 padding: 24px 100px;
             }
 
-            ul {
-                list-style-type: none;
-                margin: 0;
-                padding: 0;
-                overflow: hidden;
+            nav {
                 background-color: #333;
             }
 
-            li {
-                float: left;
+            nav ul {
+                list-style-type: none;
+                display: flex;
+                justify-content: center;
             }
 
-            li a {
+            nav ul li {
+                margin: 0
+            }
+
+            nav ul li a {
                 display: block;
                 color: white;
-                text-align: center;
                 padding: 14px 16px;
                 text-decoration: none;
+                transition: background-color 0.3s ease;
             }
 
-            li a:hover {
+            nav ul li a:hover {
                 background-color: #111;
             }
 
             h1, h2, h3, h4, h5, h6, p, a {
                 font-family: arial, sans-serif;
             }
+
+            table {
+                font-family: arial, sans-serif;
+                border-collapse: collapse;
+                width: 100%;
+            }
+
+            td, th {
+                border: 1px solid #dddddd;
+                text-align: left;
+                padding: 8px;
+            }
+
+            tr:nth-child(even) {
+                background-color: #dddddd;
+            }
         </style>
     </head>
     <body>
         <!-- Navbar -->
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="topic1.html">Topic 1</a></li>
-            <li><a href="topic2.html">Topic 2</a></li>
-            <li><a href="key_concepts.html">Key Concepts</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="references.html">References</a></li>
-        </ul>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="topic1.html">Early HTTP</a></li>
+                <li><a href="topic2.html">Modern HTTP</a></li>
+                <li><a href="key_concepts.html">Key Concepts</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="references.html">References</a></li>
+            </ul>
+        </nav>
 
-        <div class = "title">
-            <h1>All About HTTP</h1>
-        </div>
-        <div class = "container">
+        <div class="container">
+            <!-- Title of page -->
+            <div class = "title">
+                <h1>All About HTTP</h1>
+            </div>
+
+            <!-- Page contents -->
             <h2>Introduction</h2>
-            <p>Summarize HTTP</p>
+            <p>Hypertext Transfer Protocal (HTTP) is a protocol for how devices send and receive resources over networks. 
+                This is how all the information on the websites we look at every day is sent to our computers. HTTP sends information 
+                such as Hypertext Markup Language documents, images, and videos to web browsers. It also sends content back to the 
+                servers that have web pages. HTTP is an important part of how we use and communicate over networks.</p>
+            
             <h2>Key Terms</h2>
-            <p>List of terms used in other info pages</p>
+            
+            <!-- Term definitions table -->
+            <table>
+                <tr>
+                    <th>Term</th>
+                    <th>Definition</th>
+                </tr>
+                <tr>
+                    <td>HTML</td>
+                    <td>Hypertext Markup Language which is the standard system for creating files which are used to for displaying web pages</td>
+                </tr>
+                <tr>
+                    <td>Client</td>
+                    <td>A device or computer program (often a web browser) which sends requests and recieves resources and services from a server</td>
+                </tr>
+                <tr>
+                    <td>Server</td>
+                    <td>A device or computer program which recieves requests and provides resources and services to a client</td>
+                </tr>
+                <tr>
+                    <td>Pipelining</td>
+                    <td>A system of organizing tasks in stages which allows multiple taks to be complete at the same time</td>
+                </tr>
+                <tr>
+                    <td>Multiplexing</td>
+                    <td>A sytem of combining messages sent over a network which allows multiple message to be sent simultaneously which allows for sharing of resources</td>
+                </tr>
+                <tr>
+                    <td>Overhead</td>
+                    <td>Additional resources that a system uses which are not required for the system to run</td>
+                </tr>
+            </table>
+
             <h2>Table of Contents</h2>
-            <p>Links to other pages</p>
+            <ul>
+                <li><a href="topic1.html">Early HTTP</a></li>
+                <li><a href="topic2.html">Modern HTTP</a></li>
+                <li><a href="key_concepts.html">Key Concepts</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="references.html">References</a></li>
+            </ul>
         </div>
     </body>
 </html>
