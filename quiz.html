@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+    <title>Quiz</title>
+        <style>
+            /*Page title*/
+            #title {
+                background-color: #284C7A;
+                color: white;
+                margin: 0px 0px 50px 0px;
+                padding: 24px 100px;
+                text-align: center;
+                border-style: outset;
+                border-width: 10px;
+                border-color: #284C7A;
+            }
+
+            /*Creates whitspace*/
+            .container {
+                margin: 0px;
+                padding: 24px 100px;
+            }
+
+            footer {
+                margin: 60px 0px 0px 0px;
+            }
+
+            /*Navbar*/
+            nav {
+                background-color: #333;
+            }
+
+            nav ul {
+                list-style-type: none;
+                display: flex;
+                justify-content: center;
+            }
+
+            nav ul li {
+                margin: 0
+            }
+
+            nav ul li a {
+                display: block;
+                color: white;
+                padding: 14px 16px;
+                text-decoration: none;
+                transition: background-color 0.3s ease;
+            }
+
+            nav ul li a:hover {
+                color: white;
+                background-color: #111;
+            }
+
+            a:hover {
+                color: black;
+            }
+
+            /*Quiz spacing*/
+            .question {
+                margin-bottom: 15px;
+            }
+
+            h1, h2, h3, h4, h5, h6, p, a {
+                font-family: arial, sans-serif;
+            }
+
+            /*Highlights for answers*/
+            .correct {
+                background-color: #c8f7c5;
+            }
+
+            .wrong {
+                background-color: #f7c5c5;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Navbar -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="topic1.html">Early HTTP</a></li>
+                <li><a href="topic2.html">Modern HTTP</a></li>
+                <li><a href="topic3.html">Secure HTTP</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="references.html">References</a></li>
+            </ul>
+        </nav>
+        
+        <div class="container">
+            <!-- Title of page -->
+            <div id="title">
+                <h1>Quiz</h1>
+            </div>
+
+            <form id="quizForm">
+                <!--Question 1-->
+                <div class="question">
+                    <p>1. Who created HTTP?</p>
+                    <label><input type="radio" name="q1" value="Timber Smith"> Timber Smith</label><br>
+                    <label><input type="radio" name="q1" value="Steve Jobs"> Steve Jobs</label><br>
+                    <label><input type="radio" name="q1" value="Tim Berners-Lee"> Tim Berners-Lee</label>
+                </div>
+        
+                <!--Question 2-->
+                <div class="question">
+                    <p>2. What does HTTPS mean?</p>
+                    <label><input type="radio" name="q2" value="Hypertexting Transfer Protocol Social"> Hypertexting Transfer Protocol Social</label><br>
+                    <label><input type="radio" name="q2" value="Hypertext Transfer Protocol Secure"> Hypertext Transfer Protocol Secure</label><br>
+                    <label><input type="radio" name="q2" value="Paris"> Hypertext Transition Protocol Security</label>
+                </div>
+
+                <!--Question 3-->
+                <div class="question">
+                    <p>3. Which version of HTTP introduced reusing connections for sending messages?</p>
+                    <label><input type="radio" name="q3" value="HTTP/1.0"> HTTP/1.0</label><br>
+                    <label><input type="radio" name="q3" value="HTTP/1.1"> HTTP/1.1</label><br>
+                    <label><input type="radio" name="q3" value="HTTP/2"> HTTP/2</label>
+                </div>
+
+                <!--Question 4-->
+                <div class="question">
+                    <p>4. What is sending simultaneous messages called?</p>
+                    <input type="text" id="q4">
+                    <p id="q4Correct"></p>
+                </div>
+
+                <!--Question 5-->
+                <div class="question">
+                    <p>5. Which ones send messages to each other? (select all that aplly)</p>
+                    <label><input type="checkbox" value="Server"> Server</label><br>
+                    <label><input type="checkbox" value="Host"> Host</label><br>
+                    <label><input type="checkbox" value="Client"> Client</label>
+                </div>
+
+                <!--Submit and Reset buttons-->
+                <button type="button" onclick="checkAnswers()">Submit</button>
+                <button type="reset" onclick="clearResult()">Reset</button>
+            </form>
+
+            <!--Print results-->
+            <p id="result"></p>
+
+            <script>
+                //Calculate answers
+                function checkAnswers() {
+                    let score = 0;
+
+                    let q1 = document.querySelector("input[name='q1']:checked");
+                    let q2 = document.querySelector("input[name='q2']:checked");
+                    let q3 = document.querySelector("input[name='q3']:checked");
+                    let q4 = document.getElementById("q4").value.trim().toLowerCase();
+
+                    let q5 = document.querySelectorAll("input[type='checkbox']:checked");
+                    let q5Answers = Array.from(q5).map(cb => cb.value);
+                    let q5CorrectAnswers = ["Server", "Client"];
+                    
+                    if (q1 && q1.value == "Tim Berners-Lee") {
+                        score++;
+                    }
+
+                    if (q2 && q2.value == "Hypertext Transfer Protocol Secure") {
+                        score++;
+                    }
+
+                    if (q3 && q3.value == "HTTP/1.1") {
+                        score++;
+                    }
+
+                    if (q4 == "multiplexing") {
+                        score++;
+                    }
+
+                    if (q5Answers.length == q5CorrectAnswers.length &&
+                        q5CorrectAnswers.every(ans => q5Answers.includes(ans))) {
+                            score++;
+                        }
+
+                    //Calculate results
+                    if (score >= 4) {
+                        document.getElementById("result").textContent =
+                            "You passed! You got " + score + " out of 5 questions correct!";
+                    } else {
+                        document.getElementById("result").textContent =
+                            "You failed. You got " + score + " out of 5 questions correct.";
+                    }
+
+                    //Highlight correct answers
+                    //Question 1
+                    document.querySelectorAll("input[name='q1']").forEach(input => {
+                        let label = input.parentElement;
+
+                        if (input.value === "Tim Berners-Lee") {
+                            if (input.checked) {
+                                label.classList.add("correct");
+                            } else  {
+                                label.classList.add("wrong");
+                            }
+                        }
+                    });
+
+                    //Question 2
+                    document.querySelectorAll("input[name='q2']").forEach(input => {
+                        let label = input.parentElement;
+
+                        if (input.value === "Hypertext Transfer Protocol Secure") {
+                            if (input.checked) {
+                                label.classList.add("correct");
+                            } else  {
+                                label.classList.add("wrong");
+                            }
+                        }
+                    });
+
+                    //Question 3
+                    document.querySelectorAll("input[name='q3']").forEach(input => {
+                        let label = input.parentElement;
+
+                        if (input.value === "HTTP/1.1") {
+                            if (input.checked) {
+                                label.classList.add("correct");
+                            } else  {
+                                label.classList.add("wrong");
+                            }
+                        }
+                    });
+
+                    //Question 4
+                    let q4Input = document.getElementById("q4");
+                    let q4Display = document.getElementById("q4Correct");
+
+                    if (q4 == "multiplexing") {
+                        q4Input.classList.add("correct");
+                        q4Display.textContent = "";
+                    } else {
+                        q4Input.classList.add("wrong");
+                        q4Display.textContent = "Correct answer: Multiplexing";
+                    }
+
+                    //Question 5
+                    document.querySelectorAll("input[type='checkbox']").forEach(input => {
+                        let label = input.parentElement;
+
+                        if (q5CorrectAnswers.includes(input.value)) {
+                            if (input.checked) {
+                                label.classList.add("correct");
+                            } else {
+                                label.classList.add("wrong");
+                            }
+                        }
+                    });
+                }
+
+                function clearResult() {
+                    document.getElementById("result").textContent = "";
+
+                    //Removes highlight of correct answer
+                    document.querySelectorAll(".correct, .wrong").forEach(el => {
+                        el.classList.remove("correct", "wrong");
+                    });
+
+                    //Removes correct answer from question 4
+                    let q4Display = document.getElementById("q4Correct");
+                    q4Display.textContent = "";
+                }
+            </script>
+            
+
+
+            <!-- Footer indicating class project -->
+            <footer>
+                This is a project for the class IT 3202. Here is the class website <a href="https://ksuweb.github.io/IT3203/">https://ksuweb.github.io/IT3203/</a>
+            </footer>
+        </div>
+    </body>
+</html>
