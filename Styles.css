@@ -11,9 +11,16 @@
             }
 
             /*Creates whitspace*/
-            .container {
+            .container1 {
                 margin: 0px;
-                padding: 24px 100px;
+                padding: 12px 50px;
+            }
+
+            @media (min-width: 45em) {
+                .container2 {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                }
             }
 
             footer {
@@ -88,4 +95,9 @@
 
             .wrong {
                 background-color: #f7c5c5;
+            }
+
+            img {
+                max-width: 100%;
+                height: auto;
             }

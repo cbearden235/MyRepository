@@ -19,37 +19,43 @@
             </ul>
         </nav>
         
-        <div class="container">
-            <!-- Title of page -->
+        <!-- Title of page -->
+        <div class="container1">
             <div id="title">
                 <h1>Modern HTTP</h1>
             </div>
+        </div>
 
+        <div class="container2">
             <!-- HTTP Image -->
-            <img src="https://burst.shopifycdn.com/photos/person-using-laptop.jpg?width=1850&format=pjpg&exif=1&iptc=1" alt="Image of HTTP"
-            width="804.3" height="536.5" style="display: block; margin: auto;">
+            <div class="container1">
+                <img src="https://burst.shopifycdn.com/photos/person-using-laptop.jpg?width=1850&format=pjpg&exif=1&iptc=1" alt="Image of HTTP"
+                width="804.3" height="536.5" style="display: block; margin: auto;">
 
-            <!-- Reference for photo -->
-            <h6>Photo courtesy of <a href="https://www.shopify.com/stock-photos/photos/person-using-laptop">Burst</a></h6>
+                <!-- Reference for photo -->
+                <h6>Photo courtesy of <a href="https://www.shopify.com/stock-photos/photos/person-using-laptop">Burst</a></h6>
+            </div>
             
-            <!-- Contents of page -->
-            <h2>HTTP/1.1</h2>
-            <p>This version contributed several improvements including reusing connections. Before, every time a new request was sent 
-                to a server, a new connection would be created. This took time, but reusing the same connecting between 
-                a client and server was implemented. Another improvement was pipelining. This made it so that subsequent 
-                requests could be sent out over the network before previous requests had finished transmitting. Servers also 
-                started sending responses in chunks. These improvements all increased the speed of the transmissions. </p>
-            <h2>HTTP/2</h2>
-            <p>Communication continued to speed up by allowing requests and responses to be fully multiplex. This means that different 
-                responses and requests could use the same connections which saved time because new connections did not have to be created. 
-                This version also compressed HTTP header fields to reduce the protocol overhead.</p>
+            <div class="container1">
+                <!-- Contents of page -->
+                <h2>HTTP/1.1</h2>
+                <p>This version contributed several improvements including reusing connections. Before, every time a new request was sent 
+                    to a server, a new connection would be created. This took time, but reusing the same connecting between 
+                    a client and server was implemented. Another improvement was pipelining. This made it so that subsequent 
+                    requests could be sent out over the network before previous requests had finished transmitting. Servers also 
+                    started sending responses in chunks. These improvements all increased the speed of the transmissions. </p>
+                <h2>HTTP/2</h2>
+                <p>Communication continued to speed up by allowing requests and responses to be fully multiplex. This means that different 
+                    responses and requests could use the same connections which saved time because new connections did not have to be created. 
+                    This version also compressed HTTP header fields to reduce the protocol overhead.</p>
+            </div>
 
             <!-- HTTP/3 (need more research)-->
-        
-            <!-- Footer indicating class project -->
-            <footer>
-                This is a project for the class IT 3202. Here is the class website <a href="https://ksuweb.github.io/IT3203/">https://ksuweb.github.io/IT3203/</a>
-            </footer>
         </div>
+        
+        <!-- Footer indicating class project -->
+        <footer>
+            This is a project for the class IT 3202. Here is the class website <a href="https://ksuweb.github.io/IT3203/">https://ksuweb.github.io/IT3203/</a>
+        </footer>
     </body>
 </html>
