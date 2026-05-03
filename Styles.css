@@ -16,7 +16,7 @@
                 padding: 12px 50px;
             }
 
-            @media (min-width: 45em) {
+            @media (min-width: 1em) {
                 .container2 {
                     display: grid;
                     grid-template-columns: 1fr 1fr;
