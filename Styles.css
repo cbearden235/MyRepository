@@ -260,13 +260,13 @@ img {
 }
 
 .correct span /*input:checked + span */{
-    background-color: #c8f7c5;
+    background-color: #c8f7c5 !important;
     color: black;
     border-color: #ccc;
 }
 
 .wrong span/*input:checked + span*/ {
-    background-color: #f7c5c5;
+    background-color: #f7c5c5 !important;
     color: black;
     border-color: #ccc;
 }
