@@ -146,16 +146,46 @@ p {
     font-size: 18px;
 }
 
+a {
+    font-size: 18px;
+}
+
+th {
+    font-size: 18px;
+}
+
+td {
+    font-size: 18px;
+}
+
 /*For large tablets*/
 @media (min-width: 900px) {
     p {
-        font-size: 20px;
+        font-size: 24px;
+    }
+    a {
+        font-size: 24px;
+    }
+    th {
+        font-size: 24px;
+    }
+    td{
+        font-size: 24px;
     }
 }
 
 /*For computers*/
 @media (min-width: 1250px) {
     p {
+        font-size: 16px;
+    }
+    a {
+        font-size: 16px;
+    }
+    th {
+        font-size: 16px;
+    }
+    td{
         font-size: 16px;
     }
 }
