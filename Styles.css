@@ -7,7 +7,7 @@
     background-color: #284C7A;
     color: white;
     margin: 0px 0px 50px 0px;
-    padding: 24px 16px;
+    padding: 24px 16px; /*Default padding for mobile screens*/
     text-align: center;
     border-style: outset;
     border-width: 10px;
@@ -16,7 +16,7 @@
 
 @media (min-width: 768px) {
     #title {
-        padding: 24px 100px;
+        padding: 24px 100px; /*Padding for larger screens*/
     }
 }
 
@@ -35,12 +35,12 @@ main {
 
 @media (min-width: 300px) {
     main {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /*Displays everything in one column on small screens*/
     }
 }
 
 @media (min-width: 768px) {
-    main {
+    main { /*Displays everything in two columns on larger screens*/
         grid-template:
             "nav nav"
             "header header"
@@ -51,13 +51,13 @@ main {
 }
 
 /*Creates whitspace*/
-.container {
+.container { /*Default padding for smaller screens*/
     margin: 0px;
     padding: 12px 16px;
 }
 
 @media (min-width: 768px) {
-    .container {
+    .container { /*More padding for larger screens*/
         padding: 12px 50px;
     }
 }
@@ -75,7 +75,6 @@ nav ul {
     list-style-type: none;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
 }
 
 @media (max-width: 767px) {
