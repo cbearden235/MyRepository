@@ -24,13 +24,7 @@
 
             @media (min-width: 300px) {
                 main {
-                    grid-template:
-                        "nav"
-                        "header"
-                        "main"
-                        "main"
-                        "footer"
-                        / 1fr;
+                    grid-template-columns: 1fr;
                 }
             }
 
@@ -39,7 +33,7 @@
                     grid-template:
                         "nav nav"
                         "header header"
-                        "main main"
+                        "main aside"
                         "footer footer"
                         / 1fr 1fr;
                 }
