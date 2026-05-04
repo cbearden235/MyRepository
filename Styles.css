@@ -259,13 +259,13 @@ img {
     border-color: #5d86bc;
 }
 
-.correct /*input:checked + span */{
+.correct span /*input:checked + span */{
     background-color: #c8f7c5;
     color: black;
     border-color: #ccc;
 }
 
-.wrong /*input:checked + span*/ {
+.wrong span/*input:checked + span*/ {
     background-color: #f7c5c5;
     color: black;
     border-color: #ccc;
