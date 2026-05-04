@@ -41,7 +41,7 @@ nav ul.show {
 }
 
 /*Settings for bigger screens*/
-@media (min-width: 900px) {
+@media (min-width: 1090px) {
     nav ul {
         display: flex;
         flex-direction: row;
@@ -89,7 +89,7 @@ a:hover {
     border-color: #284C7A;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 1090px) {
     #title {
         padding: 24px 100px; /*Padding for larger screens*/
     }
@@ -109,7 +109,7 @@ main {
     grid-template-columns: 1fr; /*Default displays everything in one column*/
 }
 
-@media (min-width: 900px) {
+@media (min-width: 1090px) {
     main { /*Displays everything in two columns on larger screens*/
         grid-template:
             "nav nav"
@@ -126,7 +126,7 @@ main {
     padding: 12px 16px;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 1090px) {
     .container { /*More padding for larger screens*/
         padding: 12px 50px;
     }
@@ -145,7 +145,7 @@ p {
     font-size: 18px;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 1090px) {
     p {
         font-size: 16px;
     }
