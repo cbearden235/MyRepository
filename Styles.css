@@ -31,12 +31,7 @@ body {
 main {
     display: grid;
     height: 100%;
-}
-
-@media (min-width: 300px) {
-    main {
-        grid-template-columns: 1fr; /*Displays everything in one column on small screens*/
-    }
+    grid-template-columns: 1fr; /*Default displays everything in one column*/
 }
 
 @media (min-width: 900px) {
