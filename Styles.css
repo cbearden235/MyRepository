@@ -146,6 +146,10 @@ p {
     font-size: 18px;
 }
 
+h6 {
+    font-size: 16px;
+}
+
 a {
     font-size: 18px;
 }
@@ -236,4 +240,46 @@ tr:nth-child(even) {
 img {
     max-width: 100%;
     height: auto;
+}
+
+
+@media (max-width: 899px) {
+    .choice {
+        display: block;
+        margin: 10px 0px;
+        cursor: pointer;
+        display: inline-flex;
+    }
+
+    .choice input {
+        display: none;
+    }
+
+    .choice span {
+        display: block;
+        padding: 16px;
+        border: 2px solid #ccc;
+        border-radius: 10px;
+        text-align: center;
+        font-size: 18px;
+        display: inline-flex;
+    }
+
+    .choice input:checked + span {
+        background-color: #5d86bc;
+        color: white;
+        border-color: #5d86bc;
+    }
+
+    .correct input:checked + span {
+        background-color: #c8f7c5;
+        color: black;
+        border-color: #ccc;
+    }
+
+    .wrong input:checked + span {
+        background-color: #f7c5c5;
+        color: black;
+        border-color: #ccc;
+    }
 }
