@@ -141,10 +141,19 @@ h1, h2, h3, h4, h5, h6, p, a {
     font-family: arial, sans-serif;
 }
 
+/*Default for mobile devices*/
 p {
     font-size: 18px;
 }
 
+/*For large tablets*/
+@media (min-width: 900px) {
+    p {
+        font-size: 20px;
+    }
+}
+
+/*For computers*/
 @media (min-width: 1250px) {
     p {
         font-size: 16px;
