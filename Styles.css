@@ -33,7 +33,7 @@
                 }
             }
 
-            @media (min-width: 560px) {
+            @media (min-width: 700px) {
                 main {
                     grid-template:
                         "nav nav"
