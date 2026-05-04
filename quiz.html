@@ -8,7 +8,7 @@
     <body>
         <!-- Navbar -->
         <nav>
-            <button class="hamburger" onclick="toggleMenu()">☰</button>
+            <button class="hamburger" onclick="toggleMenu()">&#9776</button> <!-- &#9776 is the hamburger icon-->
 
             <ul id="nav-links">
                 <li><a href="index.html">Home</a></li>
@@ -31,25 +31,52 @@
                 <!--Question 1-->
                 <div class="question">
                     <p>1. Who created HTTP?</p>
-                    <label><input type="radio" name="q1" value="Timber Smith"> Timber Smith</label><br>
-                    <label><input type="radio" name="q1" value="Steve Jobs"> Steve Jobs</label><br>
-                    <label><input type="radio" name="q1" value="Tim Berners-Lee"> Tim Berners-Lee</label>
+                    <label class="choice">
+                        <input type="radio" name="q1" value="Timber Smith">
+                        <span>Timber Smith</span>
+                    </label><br>
+                    <label class="choice">
+                        <input type="radio" name="q1" value="Steve Jobs">
+                        <span>Steve Jobs</span>
+                    </label><br>
+                    <label class="choice">
+                        <input type="radio" name="q1" value="Tim Berners-Lee">
+                        <span>Tim Berners-Lee</span>
+                    </label>
                 </div>
         
                 <!--Question 2-->
                 <div class="question">
                     <p>2. What does HTTPS mean?</p>
-                    <label><input type="radio" name="q2" value="Hypertexting Transfer Protocol Social"> Hypertexting Transfer Protocol Social</label><br>
-                    <label><input type="radio" name="q2" value="Hypertext Transfer Protocol Secure"> Hypertext Transfer Protocol Secure</label><br>
-                    <label><input type="radio" name="q2" value="Paris"> Hypertext Transition Protocol Security</label>
+                    <label class="choice">
+                        <input type="radio" name="q2" value="Hypertexting Transfer Protocol Social">
+                        <span>Hypertexting Transfer Protocol Social</span>
+                    </label><br>
+                    <label class="choice">
+                        <input type="radio" name="q2" value="Hypertext Transfer Protocol Secure">
+                        <span>Hypertext Transfer Protocol Secure</span>
+                    </label><br>
+                    <label class="choice">
+                        <input type="radio" name="q2" value="Paris">
+                        <span>Hypertext Transition Protocol Security</span>
+                    </label>
                 </div>
 
                 <!--Question 3-->
                 <div class="question">
                     <p>3. Which version of HTTP introduced reusing connections for sending messages?</p>
-                    <label><input type="radio" name="q3" value="HTTP/1.0"> HTTP/1.0</label><br>
-                    <label><input type="radio" name="q3" value="HTTP/1.1"> HTTP/1.1</label><br>
-                    <label><input type="radio" name="q3" value="HTTP/2"> HTTP/2</label>
+                    <label class="choice">
+                        <input type="radio" name="q3" value="HTTP/1.0">
+                        <span>HTTP/1.0</span>
+                    </label><br>
+                    <label class="choice">
+                        <input type="radio" name="q3" value="HTTP/1.1">
+                        <span>HTTP/1.1</span>
+                    </label><br>
+                    <label class="choice">
+                        <input type="radio" name="q3" value="HTTP/2">
+                        <span>HTTP/2</span>
+                    </label>
                 </div>
 
                 <!--Question 4-->
@@ -62,9 +89,18 @@
                 <!--Question 5-->
                 <div class="question">
                     <p>5. Which ones send messages to each other? (select all that aplly)</p>
-                    <label><input type="checkbox" value="Server"> Server</label><br>
-                    <label><input type="checkbox" value="Host"> Host</label><br>
-                    <label><input type="checkbox" value="Client"> Client</label>
+                    <label class="choice">
+                        <input type="checkbox" value="Server">
+                        <span>Server</span>
+                    </label><br>
+                    <label class="choice">
+                        <input type="checkbox" value="Host">
+                        <span>Host</span>
+                    </label><br>
+                    <label class="choice">
+                        <input type="checkbox" value="Client">
+                        <span>Client</span>
+                    </label>
                 </div>
 
                 <!--Submit and Reset buttons-->
