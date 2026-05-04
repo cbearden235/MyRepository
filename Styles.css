@@ -25,20 +25,21 @@
             @media (min-width: 300px) {
                 main {
                     grid-template:
-                        "nav nav"
-                        "header header"
-                        "main sidebar"
-                        "footer footer"
+                        "nav"
+                        "header"
+                        "main"
+                        "main"
+                        "footer"
                         / 1fr;
                 }
             }
 
-            @media (min-width: 1090px) {
+            @media (min-width: 768px) {
                 main {
                     grid-template:
                         "nav nav"
                         "header header"
-                        "main sidebar"
+                        "main main"
                         "footer footer"
                         / 1fr 1fr;
                 }
