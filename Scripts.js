@@ -1,3 +1,9 @@
+//Hamburger
+
+function toggleMenu() {
+    document.getElementById("nav-links").classList.toggle("show");
+}
+
 //Calculate answers
 function checkAnswers() {
     let score = 0;
