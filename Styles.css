@@ -10,17 +10,44 @@
                 border-color: #284C7A;
             }
 
-            /*Creates whitspace*/
-            .container1 {
-                margin: 0px;
-                padding: 12px 50px;
+            body {
+                display: grid;
+                grid-template-rows: 75px 1fr 100px;
+                max-width: 1200px;
+                margin: 0 auto;
             }
 
-            @media (min-width: 1em) {
-                .container2 {
-                    display: grid;
-                    grid-template-columns: 1fr 1fr;
+            main {
+                display: grid;
+                height: 100%;
+            }
+
+            @media (min-width: 300px) {
+                main {
+                    grid-template:
+                        "nav nav"
+                        "header header"
+                        "main sidebar"
+                        "footer footer"
+                        / 1fr;
                 }
+            }
+
+            @media (min-width: 560px) {
+                main {
+                    grid-template:
+                        "nav nav"
+                        "header header"
+                        "main sidebar"
+                        "footer footer"
+                        / 1fr 1fr;
+                }
+            }
+
+            /*Creates whitspace*/
+            .container {
+                margin: 0px;
+                padding: 12px 50px;
             }
 
             footer {
