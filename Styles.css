@@ -1,126 +1,132 @@
 /*Page title*/
-            #title {
-                background-color: #284C7A;
-                color: white;
-                margin: 0px 0px 50px 0px;
-                padding: 24px 100px;
-                text-align: center;
-                border-style: outset;
-                border-width: 10px;
-                border-color: #284C7A;
-            }
+#title {
+    background-color: #284C7A;
+    color: white;
+    margin: 0px 0px 50px 0px;
+    padding: 24px 100px;
+    text-align: center;
+    border-style: outset;
+    border-width: 10px;
+    border-color: #284C7A;
+}
 
-            body {
-                display: grid;
-                grid-template-rows: 75px 1fr 100px;
-                max-width: 1200px;
-                margin: 0 auto;
-            }
+body {
+    display: grid;
+    grid-template-rows: 75px 1fr 100px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+}
 
-            main {
-                display: grid;
-                height: 100%;
-                grid-template-columns: 1fr;
-            }
+main {
+    display: grid;
+    height: 100%;
+}
 
-            /*@media (min-width: 300px) {
-                main {
-                    grid-template-columns: 1fr;
-                }
-            }*/
+@media (min-width: 300px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+}
 
-            @media (min-width: 768px) {
-                main {
-                    grid-template:
-                        "nav nav"
-                        "header header"
-                        "main aside"
-                        "footer footer"
-                        / 1fr 1fr;
-                }
-            }
+@media (min-width: 768px) {
+    main {
+        grid-template:
+            "nav nav"
+            "header header"
+            "main aside"
+            "footer footer"
+            / 1fr 1fr;
+    }
+}
 
-            /*Creates whitspace*/
-            .container {
-                margin: 0px;
-                padding: 12px 50px;
-            }
+/*Creates whitspace*/
+.container {
+    margin: 0px;
+    padding: 12px 16px;
+}
 
-            footer {
-                margin: 60px 0px 0px 0px;
-            }
+@media (min-width: 768px) {
+    .container {
+        padding: 12px 50px;
+    }
+}
 
-            /*Navbar*/
-            nav {
-                background-color: #333;
-            }
+footer {
+    margin: 60px 0px 0px 0px;
+}
 
-            nav ul {
-                list-style-type: none;
-                display: flex;
-                justify-content: center;
-            }
+/*Navbar*/
+nav {
+    background-color: #333;
+}
 
-            nav ul li {
-                margin: 0
-            }
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
 
-            nav ul li a {
-                display: block;
-                color: white;
-                padding: 14px 16px;
-                text-decoration: none;
-                transition: background-color 0.3s ease;
-            }
+nav ul li {
+    margin: 0
+}
 
-            nav ul li a:hover {
-                color: white;
-                background-color: #111;
-            }
+nav ul li a {
+    display: block;
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
 
-            a:hover {
-                color: black;
-            }
+nav ul li a:hover {
+    color: white;
+    background-color: #111;
+}
 
-            h1, h2, h3, h4, h5, h6, p, a {
-                font-family: arial, sans-serif;
-            }
+a:hover {
+    color: black;
+}
 
-            h6 {
-                color: gray;
-            }
+h1, h2, h3, h4, h5, h6, p, a {
+    font-family: arial, sans-serif;
+}
 
-            table {
-                font-family: arial, sans-serif;
-                border-collapse: collapse;
-                width: 100%;
-            }
+h6 {
+    color: gray;
+}
 
-            td, th {
-                border: 1px solid #dddddd;
-                text-align: left;
-                padding: 8px;
-            }
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
 
-            tr:nth-child(even) {
-                background-color: #dddddd;
-            }
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
 
-            /*Quiz spacing*/
-            .question {
-                margin-bottom: 15px;
-            }
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
 
-            /*Highlights for answers*/
-            .correct {
-                background-color: #c8f7c5;
-            }
+/*Quiz spacing*/
+.question {
+    margin-bottom: 15px;
+}
 
-            .wrong {
-                background-color: #f7c5c5;
-            }
+/*Highlights for answers*/
+.correct {
+    background-color: #c8f7c5;
+}
 
-            img {
-                max-width: 100%;
-                height: auto;
-            }
+.wrong {
+    background-color: #f7c5c5;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
