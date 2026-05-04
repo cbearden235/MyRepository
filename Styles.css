@@ -161,16 +161,25 @@ td {
 /*For large tablets*/
 @media (min-width: 900px) {
     p {
-        font-size: 24px;
+        font-size: 22px;
+    }
+    h6 {
+        font-size: 18px;
     }
     a {
-        font-size: 24px;
+        font-size: 22px;
     }
     th {
-        font-size: 24px;
+        font-size: 22px;
     }
     td{
-        font-size: 24px;
+        font-size: 22px;
+    }
+    footer{
+        font-size: 20px;
+    }
+    li{
+        font-size: 18px;
     }
 }
 
