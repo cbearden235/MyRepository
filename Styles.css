@@ -1,13 +1,23 @@
 /*Page title*/
+* { /*Helps with sizing on mobile screens*/
+    box-sizing: border-box;
+}
+
 #title {
     background-color: #284C7A;
     color: white;
     margin: 0px 0px 50px 0px;
-    padding: 24px 100px;
+    padding: 24px 16px;
     text-align: center;
     border-style: outset;
     border-width: 10px;
     border-color: #284C7A;
+}
+
+@media (min-width: 768px) {
+    #title {
+        padding: 24px 100px;
+    }
 }
 
 body {
