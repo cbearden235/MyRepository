@@ -104,9 +104,9 @@ h1, h2, h3, h4, h5, h6, p, a {
     font-family: arial, sans-serif;
 }
 
-@media (max-width: 899px) {
+@media (max-width: 10899px) {
     p {
-        font-size: 30px;
+        font-size: 18px;
     }
 }
 
