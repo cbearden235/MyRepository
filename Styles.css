@@ -20,7 +20,7 @@ nav {
     height: 60px;
 }
 
-/*Default mobile first setting*/
+/*Default mobile first setting for displaying menu buttons*/
 nav ul {
     position: absolute;
     top: 100%;
@@ -40,7 +40,7 @@ nav ul.show {
     display: flex;
 }
 
-/*Settings for bigger screens*/
+/*Settings for bigger screens for displaying menu buttons*/
 @media (min-width: 1250px) {
     nav ul {
         display: flex;
@@ -78,7 +78,7 @@ a:hover {
 }
 
 /*Page title*/
-#title {
+#title { /*Less default padding for smaller screens*/
     background-color: #284C7A;
     color: white;
     margin: 0px 0px 50px 0px;
@@ -91,7 +91,7 @@ a:hover {
 
 @media (min-width: 1250px) {
     #title {
-        padding: 24px 100px; /*Padding for larger screens*/
+        padding: 24px 100px; /*Extra padding for larger screens*/
     }
 }
 
@@ -103,10 +103,10 @@ body {
     padding: 0;
 }
 
-main {
+main { /*Default displays everything in one column*/
     display: grid;
     height: 100%;
-    grid-template-columns: 1fr; /*Default displays everything in one column*/
+    grid-template-columns: 1fr;
 }
 
 @media (min-width: 1250px) {
@@ -233,7 +233,6 @@ img {
     height: auto;
 }
 
-
 .choice {
     margin: 10px 0px;
     cursor: pointer;
@@ -259,13 +258,13 @@ img {
     border-color: #5d86bc;
 }
 
-.correct span /*input:checked + span */{
+.correct span {
     background-color: #c8f7c5 !important;
     color: black;
     border-color: #ccc;
 }
 
-.wrong span/*input:checked + span*/ {
+.wrong span {
     background-color: #f7c5c5 !important;
     color: black;
     border-color: #ccc;
@@ -305,43 +304,3 @@ img {
         background-color: #f7c5c5;
     }
 }
-
-
-/*@media (max-width: 1249px) {
-    .choice {
-        margin: 10px 0px;
-        cursor: pointer;
-        display: inline-flex;
-    }
-
-    .choice input {
-        display: none;
-    }
-
-    .choice span {
-        padding: 16px;
-        border: 2px solid #ccc;
-        border-radius: 10px;
-        text-align: center;
-        font-size: 18px;
-        display: inline-flex;
-    }
-
-    .choice input:checked + span {
-        background-color: #5d86bc;
-        color: white;
-        border-color: #5d86bc;
-    }
-
-    .correct input:checked + span {
-        background-color: #c8f7c5;
-        color: black;
-        border-color: #ccc;
-    }
-
-    .wrong input:checked + span {
-        background-color: #f7c5c5;
-        color: black;
-        border-color: #ccc;
-    }
-}*/
