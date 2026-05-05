@@ -262,12 +262,14 @@ img {
     border-color: #5d86bc;
 }
 
+.correct,
 .correct span {
     background-color: #c8f7c5 !important;
     color: black;
     border-color: #ccc;
 }
 
+.wrong,
 .wrong span {
     background-color: #f7c5c5 !important;
     color: black;
