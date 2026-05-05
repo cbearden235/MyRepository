@@ -51,9 +51,13 @@
                 <p>Communication continued to speed up by allowing requests and responses to be fully multiplex. This means that different 
                     responses and requests could use the same connections which saved time because new connections did not have to be created. 
                     This version also compressed HTTP header fields to reduce the protocol overhead.</p>
+                <h2>HTTP/3</h2>
+                <p>When this version of HTTP was released, it changed the system used for transporting messages over the network. The system 
+                    that had been used before was called Transmission Control Protocol (TCP). This was replaced by Quick UDP Internet 
+                    Connections (QUIC). Using QUIC instead of TCP removed some issues with messages being blocked, connections taking a 
+                    to be made, and network connections breaking off when changing networks.
+                </p>
             </div>
-
-            <!-- HTTP/3 (need more research)-->
         
         <!-- Footer indicating class project -->
         <footer>
